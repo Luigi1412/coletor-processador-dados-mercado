@@ -8,7 +8,7 @@ A nota é individual pela **autoria do commit git**. Não peça a outra pessoa p
 
 | Integrante | ADR sugerido | Tema | Commit próprio? |
 |------------|--------------|------|-----------------|
-| Luigi | `0001-preco-ajustado-adj-close.md` | Adj Close | pendente |
+| Luigi | `0001-preco-ajustado-adj-close.md` | Adj Close | feito (repo) |
 | Hugo | `0002-lacunas-sem-imputacao.md` | Lacunas | pendente |
 | Erik | `0003-alinhamento-por-intersecao.md` | Interseção | pendente |
 | Arthur | `0004-persistencia-local.md` | Persistência | pendente |
