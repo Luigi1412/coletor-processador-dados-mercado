@@ -2,7 +2,7 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: _preencher com o(s) aluno(s) responsável(is) e commit individual_
+- Decisores: Hugo _(confirmar com commit individual)_
 - Consultados: SPEC.md; requisitos de tratamento do barema
 - Informados: Grupo 4
 
@@ -23,7 +23,7 @@ Escolhemos a Opção C.
 ## Consequências
 - Bom, porque retornos multi-pregão não são rotulados como diários.
 - Ruim, porque reduz o tamanho da amostra alinhada.
-- Impacto numérico: depende dos ativos oficiais (medir n antes/depois do tratamento).
+- Impacto numérico: no caso oficial (5 tickers, 2024–2025), a cobertura pós-alinhamento foi **1,0** com **500** retornos alinhados (`docs/evidence/caso_ativos_oficiais.txt`) — sem fabricar dias; se houvesse forward-fill, n e volatilidade mudariam artificialmente.
 
 ## Confirmação
 `treatment.compute_valid_daily_returns`; testes `test_gap_does_not_create_multiday_as_daily`.

@@ -57,27 +57,18 @@ Esta entrega resolve a fundação de dados:
 - Sharpe Ratio e métricas que exijam taxa livre de risco ou outras premissas extras
 - Conversão cambial consolidada (apenas sinalização quando moedas diferirem)
 
-### 2.3 Ativos: oficiais vs provisórios
+### 2.3 Ativos oficiais do Grupo 4
 
-#### Oficiais do grupo (obrigatório para o caso do barema)
+Fonte de verdade: [`config/ativos_oficiais.yaml`](config/ativos_oficiais.yaml) · espelhado em `OFFICIAL_TICKERS` no código.
 
-Fonte de verdade: [`config/ativos_oficiais.yaml`](config/ativos_oficiais.yaml).
+| Campo | Valor |
+|-------|--------|
+| `definidos` | **`true`** (2026-10-19) |
+| Tickers | `PETR4.SA`, `VALE3.SA`, `ITUB4.SA`, `WEGE3.SA`, `ABEV3.SA` |
+| Período de teste | `2024-01-02` → `2025-12-31` |
+| Integrantes | Luigi, Hugo, Erik, Arthur, Enzo, Rodrigo |
 
-| Campo | Estado atual |
-|-------|----------------|
-| `definidos` | **`false`** — pendente de decisão do Grupo 4 |
-| `tickers` | `[]` (vazio até o grupo preencher) |
-| Caso de teste no plano (§12.3) | Bloqueado até `definidos: true` |
-
-Quando o grupo definir a carteira candidata, atualizar o YAML (`definidos: true`, tickers, período de teste) e esta seção do SPEC. Não tratar exemplos provisórios como seleção aprovada.
-
-#### Provisórios (apenas desenvolvimento / demo)
-
-Lista inicial configurável (provisória, **não** aprovada pelo grupo):
-
-```
-PETR4.SA, VALE3.SA, ITUB4.SA, BBDC4.SA, WEGE3.SA
-```
+**Justificativa da carteira candidata:** cinco ações líquidas da B3, diversificadas por setor (energia, materiais, financeiro, industrial, consumo), alinhadas ao barema (“carteira candidata bem tratada” em vez de universo amplo). Verificadas com yfinance (séries históricas disponíveis no intervalo).
 
 Período inicial sugerido na UI: ~2 anos até a data corrente; datas editáveis; sem limite estrutural que impeça históricos maiores.
 
@@ -408,15 +399,15 @@ Somente o que for verificável na documentação oficial. Sem integração pront
 
 ### 12.3 Caso com os dados do grupo (barema — Spec/docs)
 
-**Status:** pendente enquanto `config/ativos_oficiais.yaml` → `definidos: false`.
+**Status:** definido — tickers e período em `config/ativos_oficiais.yaml`.
 
-Quando definidos, o caso deve:
+Procedimento:
 
-1. Usar exclusivamente os tickers oficiais do YAML.
-2. Rodar coleta no período de teste registrado no YAML.
+1. Usar exclusivamente `OFFICIAL_TICKERS`.
+2. Coletar em `2024-01-02` → `2025-12-31`.
 3. Gerar DataFrame de retornos sem nulos + relatório descritivo.
-4. Registrar evidência em `docs/evidence/caso_ativos_oficiais.txt` (shape, período efetivo, `collected_at`).
-5. Atualizar o impacto numérico nos ADRs individuais.
+4. Evidência: `docs/evidence/caso_ativos_oficiais.txt`.
+5. Teste automatizado: `pytest -m integration` → `test_official_group_assets`.
 
 ---
 

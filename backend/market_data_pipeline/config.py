@@ -1,21 +1,27 @@
-"""Configuração do pipeline e defaults provisórios."""
+"""Configuração do pipeline e defaults oficiais do grupo."""
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import date, timedelta
 from typing import Literal
 
 METHODOLOGY_VERSION = "1.0.0"
 
-# Lista provisória — NÃO é a seleção oficial do grupo.
-PROVISIONAL_TICKERS: list[str] = [
+# Carteira oficial do Grupo 4 (ver config/ativos_oficiais.yaml e SPEC §2.3).
+OFFICIAL_TICKERS: list[str] = [
     "PETR4.SA",
     "VALE3.SA",
     "ITUB4.SA",
-    "BBDC4.SA",
     "WEGE3.SA",
+    "ABEV3.SA",
 ]
+
+# Alias mantido para compatibilidade; aponta para a lista oficial.
+PROVISIONAL_TICKERS: list[str] = OFFICIAL_TICKERS
+
+OFFICIAL_TEST_START = "2024-01-02"
+OFFICIAL_TEST_END = "2025-12-31"
 
 PriceField = Literal["Adj Close", "Close"]
 

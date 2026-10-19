@@ -9,7 +9,11 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from market_data_pipeline.config import PipelineConfig, PROVISIONAL_TICKERS, default_start_end
+from market_data_pipeline.config import (
+    OFFICIAL_TICKERS,
+    PipelineConfig,
+    default_start_end,
+)
 from market_data_pipeline.exceptions import PipelineError
 from market_data_pipeline.exports import export_all
 from market_data_pipeline.persistence import save_analysis
@@ -22,10 +26,10 @@ console = Console()
 @app.command("collect")
 def collect(
     tickers: str = typer.Option(
-        ",".join(PROVISIONAL_TICKERS[:2]),
+        ",".join(OFFICIAL_TICKERS),
         "--tickers",
         "-t",
-        help="Tickers separados por vírgula (ex.: PETR4.SA,VALE3.SA)",
+        help="Tickers separados por vírgula (carteira oficial por padrão)",
     ),
     start: Optional[str] = typer.Option(None, "--start", "-s", help="Data inicial YYYY-MM-DD"),
     end: Optional[str] = typer.Option(None, "--end", "-e", help="Data final YYYY-MM-DD"),
@@ -93,8 +97,11 @@ def collect(
 def defaults() -> None:
     """Mostra tickers provisórios e período sugerido."""
     s, e = default_start_end(2)
-    console.print("Tickers provisórios (NÃO oficiais do grupo):", ", ".join(PROVISIONAL_TICKERS))
-    console.print(f"Período sugerido (~2 anos): {s.isoformat()} → {e.isoformat()}")
+    from market_data_pipeline.config import OFFICIAL_TEST_END, OFFICIAL_TEST_START
+
+    console.print("Tickers oficiais do Grupo 4:", ", ".join(OFFICIAL_TICKERS))
+    console.print(f"Período de teste oficial: {OFFICIAL_TEST_START} → {OFFICIAL_TEST_END}")
+    console.print(f"Período UI (~2 anos até hoje): {s.isoformat()} → {e.isoformat()}")
 
 
 def main() -> None:

@@ -2,7 +2,7 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: _preencher com o(s) aluno(s) responsável(is) e commit individual_
+- Decisores: Arthur _(confirmar com commit individual)_
 - Consultados: requisitos de reabertura e atualização manual
 - Informados: Grupo 4
 
@@ -23,6 +23,7 @@ Opção B. Refresh cria nova análise com `parent_analysis_id`, preservando a ve
 ## Consequências
 - Bom, porque é auditável e portátil.
 - Ruim, porque sem índices avançados de busca.
+- Impacto numérico no caso do grupo: a análise oficial (`analysis_id` em `docs/evidence/caso_ativos_oficiais.txt`) reabre o mesmo shape **(500, 5)** sem novo download ao alternar métricas/exportações.
 - Confirmação: `persistence.save_analysis` / `load_analysis`; testes de reabertura.
 
 ## Prós e contras das opções

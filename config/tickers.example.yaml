@@ -1,13 +1,11 @@
-# Lista configurável de tickers — edite sem alterar código-fonte.
-# ATENÇÃO: exemplos provisórios. NÃO são os ativos oficiais do grupo.
+# Espelho da carteira oficial do Grupo 4 (ver ativos_oficiais.yaml).
 
 tickers:
   - PETR4.SA
   - VALE3.SA
   - ITUB4.SA
-  - BBDC4.SA
   - WEGE3.SA
+  - ABEV3.SA
 
-# Período sugerido (~2 anos). A CLI/API aceitam --start/--end livres.
-# start: "2024-01-01"
-# end: "2025-12-31"
+start: "2024-01-02"
+end: "2025-12-31"

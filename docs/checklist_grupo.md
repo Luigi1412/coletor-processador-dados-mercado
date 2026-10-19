@@ -1,31 +1,25 @@
 # Checklist do grupo — fechar Sprint 1 (barema)
 
-Ordem sugerida. A reformulação de UI fica **depois**, em separado.
+Integrantes: **Luigi, Hugo, Erik, Arthur, Enzo, Rodrigo**.
 
-## 1. Git (repositório do grupo)
+## 1. Git
 
-- [x] `git init` no workspace local (feito na preparação)
-- [ ] Conectar ao remoto do grupo (GitLab/GitHub Inteli), ex.:
-  ```bash
-  git remote add origin <URL_DO_REPO_DO_GRUPO>
-  git push -u origin main
-  ```
-- [ ] Cada aluno clona/faz pull e configura `user.name` / `user.email` próprios
+- [x] `git init` + commit inicial do artefato
+- [ ] Colega revisa a pasta / conecta remoto GitLab-GitHub e faz push
+- [ ] Cada aluno configura `user.name` / `user.email` próprios na máquina
 
-## 2. Ativos oficiais no SPEC
+## 2. Ativos oficiais
 
-- [ ] Grupo define a lista definitiva de tickers
-- [ ] Preencher `config/ativos_oficiais.yaml` (`definidos: true` + tickers + datas de teste)
-- [ ] Atualizar `SPEC.md` §2.3 e §12.3 (remover status “pendente”)
-- [ ] (Opcional) alinhar defaults da CLI/UI aos oficiais
-- [ ] Rodar teste de integração com esses tickers e salvar evidência em `docs/evidence/`
+- [x] Lista definida em `config/ativos_oficiais.yaml`
+- [x] SPEC §2.3 e §12.3 atualizados
+- [x] Defaults do código (`OFFICIAL_TICKERS`)
+- [x] Evidência `docs/evidence/caso_ativos_oficiais.txt` (500×5, cobertura 1.0)
 
-## 3. ADRs autorais (20% individuais)
+## 3. ADRs autorais (20%)
 
-- [ ] Cada aluno segue `docs/adr/COMO_REGISTRAR.md`
-- [ ] Preencher a tabela de integrantes em `COMO_REGISTRAR.md`
-- [ ] Após ativos oficiais: completar “impacto numérico no caso do grupo” nos ADRs
+- [ ] Cada um segue `docs/adr/COMO_REGISTRAR.md` e faz **seu** commit
+- [ ] Atualizar impacto numérico com a evidência dos oficiais
 
-## 4. Depois (fora deste checklist)
+## 4. Depois
 
-- [ ] Reformulação completa da interface (congelar o núcleo até lá)
+- [ ] Reformulação completa da interface (núcleo congelado)

@@ -13,7 +13,9 @@ from pydantic import BaseModel, Field
 
 from market_data_pipeline.config import (
     METHODOLOGY_VERSION,
-    PROVISIONAL_TICKERS,
+    OFFICIAL_TEST_END,
+    OFFICIAL_TEST_START,
+    OFFICIAL_TICKERS,
     PipelineConfig,
     default_start_end,
 )
@@ -90,13 +92,16 @@ def health() -> dict[str, Any]:
 def config_defaults() -> dict[str, Any]:
     s, e = default_start_end(2)
     return {
-        "provisional_tickers": PROVISIONAL_TICKERS,
+        "provisional_tickers": OFFICIAL_TICKERS,
+        "official_tickers": OFFICIAL_TICKERS,
         "provisional_note": (
-            "Lista provisória de exemplos brasileiros. "
-            "NÃO representa a seleção oficial de ativos do grupo."
+            "Carteira oficial do Grupo 4 (PETR4, VALE3, ITUB4, WEGE3, ABEV3). "
+            f"Período de teste documentado: {OFFICIAL_TEST_START} → {OFFICIAL_TEST_END}."
         ),
-        "suggested_start": s.isoformat(),
-        "suggested_end": e.isoformat(),
+        "suggested_start": OFFICIAL_TEST_START,
+        "suggested_end": OFFICIAL_TEST_END,
+        "ui_default_start": s.isoformat(),
+        "ui_default_end": e.isoformat(),
         "max_tickers": CONFIG.max_tickers,
         "price_field": CONFIG.price_field,
         "methodology_version": METHODOLOGY_VERSION,

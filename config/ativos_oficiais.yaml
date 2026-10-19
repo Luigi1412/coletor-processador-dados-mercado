@@ -1,29 +1,26 @@
 # ATIVOS OFICIAIS DO GRUPO 4
-# -------------------------
-# Preencha esta lista quando o grupo definir a carteira candidata.
-# Enquanto `definidos: false`, o SPEC e os testes tratam apenas exemplos
-# provisórios (não oficiais).
-#
-# Depois de preencher:
-# 1. Defina definidos: true
-# 2. Atualize SPEC.md §2.3 e §12.3
-# 3. Atualize PROVISIONAL_TICKERS ou a fonte de defaults (se o grupo quiser
-#    que a UI/CLI usem os oficiais como padrão)
-# 4. Rode: pytest -m integration  e registre evidência em docs/evidence/
+# Carteira candidata diversificada (B3), definida para a Sprint 1.
+# Justificativa: cobertura setorial sem overconcentration bancária;
+# tickers líquidos e verificáveis via yfinance (.SA).
 
-definidos: false
-data_definicao: null  # AAAA-MM-DD
+definidos: true
+data_definicao: "2026-10-19"
 justificativa: |
-  Pendente de definição pelo Grupo 4.
-  Não confundir com a lista provisória de exemplos brasileiros.
+  Carteira candidata de 5 ações B3 para fundação de dados (Portfolio Solutions):
+  - PETR4.SA — energia (Petrobras PN)
+  - VALE3.SA — materiais (Vale ON)
+  - ITUB4.SA — financeiro (Itaú Unibanco PN)
+  - WEGE3.SA — industrial (WEG ON)
+  - ABEV3.SA — consumo não cíclico (Ambev ON)
+  Cinco ativos bem tratados, em linha com o barema (carteira candidata > universo amplo).
 
-tickers: []
-# Exemplo (remover comentário e listar os oficiais):
-# tickers:
-#   - PETR4.SA
-#   - VALE3.SA
-#   - ...
+tickers:
+  - PETR4.SA
+  - VALE3.SA
+  - ITUB4.SA
+  - WEGE3.SA
+  - ABEV3.SA
 
 periodo_teste_sugerido:
-  start: null  # YYYY-MM-DD
-  end: null    # YYYY-MM-DD
+  start: "2024-01-02"
+  end: "2025-12-31"

@@ -2,7 +2,7 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: _preencher com o(s) aluno(s) responsável(is) e commit individual_
+- Decisores: Luigi _(confirmar com commit individual)_
 - Consultados: documentação yfinance; SPEC.md do artefato
 - Informados: Grupo 4
 
@@ -23,8 +23,8 @@ Escolhemos a Opção B, porque torna explícito o campo ajustado e impede reapli
 ## Consequências
 - Bom, porque a política fica auditável (`price_field` na config/metadados).
 - Ruim, porque dependemos da qualidade do Adj Close do Yahoo.
-- Impacto numérico no caso do grupo: a calcular quando os ativos oficiais forem definidos (comparar Close vs Adj Close no mesmo intervalo).
-- Predição: diferenças maiores em ações com dividendos frequentes.
+- Impacto numérico no caso do grupo: na amostra oficial alinhada (500 dias, 2024-01-03→2025-12-30), ITUB4.SA teve a maior média diária (~0,103%/dia) e WEGE3.SA a maior volatilidade diária (~1,78%); usar Adj Close evita distorcer esses retornos por eventos corporativos.
+- Predição: diferenças maiores em ações com dividendos frequentes (ex.: bancos e utilities).
 
 ## Confirmação
 `YFinanceProvider` com `auto_adjust=False`; testes de pipeline; `docs/methodology.md`.

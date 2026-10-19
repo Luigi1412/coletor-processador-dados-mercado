@@ -2,7 +2,7 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: _preencher com o(s) aluno(s) responsável(is) e commit individual_
+- Decisores: Erik _(confirmar com commit individual)_
 - Consultados: SPEC.md
 - Informados: Grupo 4
 
@@ -24,6 +24,7 @@ Opção B.
 - Bom, porque estatísticas usam observação completa por data.
 - Ruim, porque ativos com calendários muito distintos encolhem a amostra.
 - Gráficos temporais continuam nas séries individuais.
+- Impacto numérico no caso do grupo: interseção manteve **500** dias comuns e cobertura **100%** da união das datas de retorno válido dos cinco oficiais no período de teste.
 
 ## Confirmação
 `align_returns`; `InsufficientDataError` sem interseção; UI de cobertura.

@@ -5,8 +5,8 @@ Artefato da **Sprint 1 · Grupo 4 · Inteli × BTG Pactual** (Wealth Management 
 Fundação de dados: coleta de preços históricos (yfinance), tratamento conservador, retornos diários alinhados, métricas descritivas, API FastAPI, CLI e interface React.
 
 > **SPEC.md** foi escrito **antes** da implementação.  
-> Tickers de exemplo são **provisórios** — não são a seleção oficial do grupo.  
-> Checklist do grupo (git remoto, ativos oficiais, ADRs autorais): [`docs/checklist_grupo.md`](docs/checklist_grupo.md).
+> Carteira oficial: `PETR4.SA, VALE3.SA, ITUB4.SA, WEGE3.SA, ABEV3.SA` (`2024-01-02` → `2025-12-31`).  
+> Checklist do grupo (remoto, ADRs autorais): [`docs/checklist_grupo.md`](docs/checklist_grupo.md).
 
 ## Requisitos
 

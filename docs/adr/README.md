@@ -17,14 +17,15 @@ Os arquivos `0001`–`0005` são **registros técnicos de referência** da imple
 
 ## Índice técnico (referência)
 
-| Arquivo | Tema | Status autoria |
-|---------|------|----------------|
-| `0001-preco-ajustado-adj-close.md` | Adj Close vs auto_adjust | Aguardando aluno assumir + commit |
-| `0002-lacunas-sem-imputacao.md` | Política de lacunas | Aguardando aluno assumir + commit |
-| `0003-alinhamento-por-intersecao.md` | Interseção de datas | Aguardando aluno assumir + commit |
-| `0004-persistencia-local.md` | Parquet/JSON local | Aguardando aluno assumir + commit |
-| `0005-fonte-yfinance-e-csv.md` | Provedor e CSV | Aguardando aluno assumir + commit |
+| Arquivo | Tema | Responsável sugerido |
+|---------|------|----------------------|
+| `0001-preco-ajustado-adj-close.md` | Adj Close vs auto_adjust | Luigi |
+| `0002-lacunas-sem-imputacao.md` | Política de lacunas | Hugo |
+| `0003-alinhamento-por-intersecao.md` | Interseção de datas | Erik |
+| `0004-persistencia-local.md` | Parquet/JSON local | Arthur |
+| `0005-fonte-yfinance-e-csv.md` | Provedor e CSV | Enzo |
+| `0006-relatorio-descritivo-deterministico.md` | Relatório sem LLM | Rodrigo |
 
-## Pendência de impacto numérico
+## Impacto numérico
 
-Enquanto `config/ativos_oficiais.yaml` tiver `definidos: false`, a seção “impacto numérico no caso do grupo” dos ADRs permanece a calcular após a definição da carteira oficial.
+Carteira oficial definida (`definidos: true`). Após `pytest -m integration`, usar `docs/evidence/caso_ativos_oficiais.txt` para completar o impacto numérico em cada ADR no commit autoral.

@@ -2,7 +2,7 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: _preencher com o(s) aluno(s) responsável(is) e commit individual_
+- Decisores: Enzo _(confirmar com commit individual)_
 - Consultados: documentação yfinance; requisito de CSV para planilha
 - Informados: Grupo 4
 
@@ -24,6 +24,7 @@ Opção B. Integrações oficiais adicionais só quando verificáveis; enquanto 
 - Bom, porque o núcleo funciona offline nos testes com fixtures e online via Yahoo.
 - Ruim, porque yfinance pode falhar ou mudar formato (mitigado por normalização + retentativas).
 - Complementos (cotação/fundamentos/notícias) isolados.
+- Impacto numérico no caso do grupo: download yfinance dos 5 oficiais no intervalo 2024–2025 produziu **500** retornos alinhados sem falha parcial; CSV permanece disponível para séries de taxa (CDI) sem tratá-las como preço.
 
 ## Confirmação
 `providers/`; `docs/csv_import_model.md`; testes de unidade CSV.

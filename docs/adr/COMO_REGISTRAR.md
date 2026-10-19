@@ -4,30 +4,32 @@ Formato: [MADR do módulo](https://gist.github.com/josercf/fc714afe20773401dc9d5
 
 A nota é individual pela **autoria do commit git**. Não peça a outra pessoa para commitar o seu ADR.
 
+## Integrantes e atribuição sugerida
+
+| Integrante | ADR sugerido | Tema | Commit próprio? |
+|------------|--------------|------|-----------------|
+| Luigi | `0001-preco-ajustado-adj-close.md` | Adj Close | pendente |
+| Hugo | `0002-lacunas-sem-imputacao.md` | Lacunas | pendente |
+| Erik | `0003-alinhamento-por-intersecao.md` | Interseção | pendente |
+| Arthur | `0004-persistencia-local.md` | Persistência | pendente |
+| Enzo | `0005-fonte-yfinance-e-csv.md` | yfinance + CSV | pendente |
+| Rodrigo | `0006-relatorio-descritivo-deterministico.md` | Relatório | pendente |
+
+A atribuição é organizacional. Cada um deve **assumir de fato** a decisão (editar Decisores, impacto numérico, e commit com a própria identidade).
+
 ## Passo a passo (cada aluno)
 
-1. Configure seu git local com **seu** nome e e-mail acadêmicos (uma vez na máquina):
+1. Configure seu git local com **seu** nome e e-mail acadêmicos:
    ```bash
    git config user.name "Seu Nome Completo"
    git config user.email "seu.email@sou.inteli.edu.br"
    ```
-2. Escolha **uma** decisão que você tomou ou defendeu de verdade nesta sprint.
-   Temas já documentados como referência técnica (podem ser “assumidos” por um aluno que de fato trabalhou neles):
-   - `0001` — Adj Close / preço ajustado
-   - `0002` — lacunas sem imputação
-   - `0003` — alinhamento por interseção
-   - `0004` — persistência local
-   - `0005` — yfinance + CSV
-   Ou crie um novo arquivo `0006-...md` a partir de `0000-template-madr.md`.
-3. Edite o ADR escolhido:
-   - Preencha **Decisores** com o seu nome
-   - Preencha Consultados / Informados
-   - Complete **Impacto numérico no caso do grupo** depois que `config/ativos_oficiais.yaml` estiver definido
-4. Faça uma mudança mínima amarrada (ex.: docstring, teste, trecho de docs) **se** o ADR ainda não refletir commit seu no código.
+2. Abra o ADR da tabela acima (ou crie outro a partir de `0000-template-madr.md` se trocarem entre si).
+3. Remova o texto `_(confirmar com commit individual)_` e deixe só o seu nome em **Decisores**.
+4. Complete **Impacto numérico no caso do grupo** com base em `docs/evidence/caso_ativos_oficiais.txt`.
 5. Commit **só com a sua identidade**:
    ```bash
    git add docs/adr/NNNN-seu-arquivo.md
-   # e arquivos de código relacionados, se houver
    git commit -m "$(cat <<'EOF'
    docs(adr): registra decisão sobre <tema curto>
 
@@ -41,13 +43,13 @@ A nota é individual pela **autoria do commit git**. Não peça a outra pessoa p
 - Não inventar decisão que você não tomou.
 - Não commitar ADR de colega.
 - Não usar `--author` de outra pessoa.
-- Não deixar `Decisores: _preencher..._`.
+- Não deixar Decisores genéricos.
 
-## Checklist rápido do grupo
+## Remoto
 
-| Integrante | ADR (arquivo) | Commit próprio? | Impacto numérico com ativos oficiais? |
-|------------|---------------|-----------------|----------------------------------------|
-| (nome)     |               |                 |                                        |
-| (nome)     |               |                 |                                        |
-| (nome)     |               |                 |                                        |
-| (nome)     |               |                 |                                        |
+O repositório ainda será revisado/publicado pelo colega do grupo. Quando houver URL GitLab/GitHub:
+
+```bash
+git remote add origin <URL>
+git push -u origin main
+```
