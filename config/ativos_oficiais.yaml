@@ -1,0 +1,29 @@
+# ATIVOS OFICIAIS DO GRUPO 4
+# -------------------------
+# Preencha esta lista quando o grupo definir a carteira candidata.
+# Enquanto `definidos: false`, o SPEC e os testes tratam apenas exemplos
+# provisórios (não oficiais).
+#
+# Depois de preencher:
+# 1. Defina definidos: true
+# 2. Atualize SPEC.md §2.3 e §12.3
+# 3. Atualize PROVISIONAL_TICKERS ou a fonte de defaults (se o grupo quiser
+#    que a UI/CLI usem os oficiais como padrão)
+# 4. Rode: pytest -m integration  e registre evidência em docs/evidence/
+
+definidos: false
+data_definicao: null  # AAAA-MM-DD
+justificativa: |
+  Pendente de definição pelo Grupo 4.
+  Não confundir com a lista provisória de exemplos brasileiros.
+
+tickers: []
+# Exemplo (remover comentário e listar os oficiais):
+# tickers:
+#   - PETR4.SA
+#   - VALE3.SA
+#   - ...
+
+periodo_teste_sugerido:
+  start: null  # YYYY-MM-DD
+  end: null    # YYYY-MM-DD

@@ -1,0 +1,9 @@
+comando:
+  python -m market_data_pipeline.cli collect --tickers PETR4.SA,VALE3.SA --start 2024-10-01 --end 2025-03-31 --output ./output --allow-partial
+
+resultado (2026-10-19):
+  analysis_id=de4ea438-0ed8-4353-af50-2b43602bbe6e
+  shape=(121, 2)
+  período efetivo=2024-10-02→2025-03-31
+  status=PASSED
+  nota=Tickers provisórios — NÃO oficiais do grupo.

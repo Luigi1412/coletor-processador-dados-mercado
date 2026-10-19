@@ -1,0 +1,31 @@
+# Python
+backend/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/*.egg-info/
+backend/dist/
+backend/build/
+backend/output/
+backend/data/
+.coverage
+htmlcov/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# Canvas / local
+*.canvas.data.json
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local exports
+**/output/
+*.tsbuildinfo

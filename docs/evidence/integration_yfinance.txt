@@ -1,0 +1,8 @@
+status=PASSED
+tickers=PETR4.SA,VALE3.SA (provisórios — NÃO oficiais do grupo)
+requested=2026-06-21..2026-10-19
+effective=2026-06-23..2026-10-19
+shape=(83, 2)
+collected_at=2026-10-19T15:25:29Z
+methodology=1.0.0
+note=Caso com ativos oficiais do grupo: PENDENTE até definição do grupo.
