@@ -2,9 +2,9 @@
 
 - Status: aceito
 - Data: 2026-10-19
-- Decisores: Luigi _(confirmar com commit individual)_
+- Decisores: Luigi
 - Consultados: documentação yfinance; SPEC.md do artefato
-- Informados: Grupo 4
+- Informados: Hugo, Erik, Arthur, Enzo, Rodrigo
 
 ## Contexto e problema
 O cálculo de retornos exige preços comparáveis ao longo do tempo na presença de dividendos e splits. O yfinance oferece `Close`, `Adj Close` e a opção `auto_adjust=True`, que reescreve a série OHLCV.
